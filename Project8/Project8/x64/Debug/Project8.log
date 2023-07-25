@@ -1,0 +1,27 @@
+﻿  Ref_livre.c
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(702,22): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(702,26): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(702,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(702,34): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(669,17): warning C4101: 'zi': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(669,29): warning C4101: 'zf': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(736,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(736,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(736,44): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(747,17): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(750,31): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(750,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(750,45): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(761,17): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(766,31): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(766,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(766,45): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(774,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(774,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(774,44): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(894,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(894,54): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(921,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(921,53): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project8\Project8\Ref_livre.c(921,66): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+  Project8.vcxproj -> C:\Users\Felipe\Desktop\Programacao2\Project8\x64\Debug\Project8.exe

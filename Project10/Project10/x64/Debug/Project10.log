@@ -1,0 +1,27 @@
+﻿  Refracao_V10.c
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1015,22): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1015,26): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1015,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1015,34): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(982,17): warning C4101: 'zi': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(982,29): warning C4101: 'zf': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1051,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1051,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1051,44): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1062,17): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1065,31): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1065,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1065,45): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1076,17): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1081,31): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1081,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1081,45): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1089,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1089,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1089,44): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1209,41): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1209,54): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1236,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1236,53): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project10\Project10\Refracao_V10.c(1236,66): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+  Project10.vcxproj -> C:\Users\Felipe\Desktop\Programacao2\Project10\x64\Debug\Project10.exe

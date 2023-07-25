@@ -1,0 +1,20 @@
+﻿  3d_sdl_test.c
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(533,22): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(533,26): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(533,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(533,34): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(491,17): warning C4101: 'zi': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(491,29): warning C4101: 'zf': variável local não referenciada
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(577,29): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(577,39): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(577,43): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(637,17): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(640,30): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(640,40): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(640,44): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(645,29): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(645,39): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(645,43): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(839,24): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Felipe\Desktop\Programacao2\Project3\Project3\3d_sdl_test.c(839,36): warning C4244: 'função': conversão de 'double' para 'int', possível perda de dados
+  Project3.vcxproj -> C:\Users\Felipe\Desktop\Programacao2\Project3\x64\Debug\Project3.exe
