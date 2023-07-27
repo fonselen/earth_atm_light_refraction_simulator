@@ -46,7 +46,7 @@ void DataShow(ponto_xy Obs, ponto_xy TangentP, ponto_xy TUp, ponto_xy TDown, pon
 
 
 /* Variaveis globais para dados auxiliares. */
-ponto_xy Paux, Paux2;
+//ponto_xy Paux, Paux2;
 SDL_Renderer* renderer = NULL;
 
 
@@ -56,12 +56,13 @@ int main(int argc, char* argv[])
 	int i, j, n_pontos[10], n_pontos_total, posRT = 0; // variaveis de controle
 	double altM; //altura maxima da atmosfera
 	double esp; 		// espessura de cada camada
-	ponto_xy **L_ray, L_ray1[25000], Tangent_Line[2]; 	// declaração do conjunto de direções que representara o raio de luz na atmosfera
-	ponto_xy P_0[10], Pcam, obs;			// pontos iniciais
+	ponto_xy **L_ray, L_ray1[25000], L_rayRefracted[7][2], Tangent_Line[2]; 	// declaração do conjunto de direções que representara o raio de luz na atmosfera
+	ponto_xy P_0[10], Pcam, obs, Paux1, Paux2;			// pontos iniciais
 	double ang_0[10];		// angulos de direcao iniciais para os raios de luz
 	double xM[10], z;						// profundidade da camera
 	double expoente = 0;			// variavel ara o calculo dos indices de refracao			
 	int luz_cor[10][3], luz_corT[3]; // parametros para cor
+	double m;
 
 	luz_cor[0][0] = 255;
 	luz_cor[0][1] = 255;
@@ -102,9 +103,9 @@ int main(int argc, char* argv[])
 		xM[i] = -5;
 	}
 
-	L_ray = (ponto_xy**)malloc(10 * sizeof(ponto_xy*));
+	L_ray = (ponto_xy**)malloc(7 * sizeof(ponto_xy*));
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 7; i++)
 	{
 		L_ray[i] = (ponto_xy*)malloc(1013 * sizeof(ponto_xy));
 	}
@@ -348,14 +349,13 @@ int main(int argc, char* argv[])
 	ang1 = -0.00021;
 	ang2 = -0.00001;*/
 
-
-	Paux.x = 35;
-	Paux.y = 6370;
-	z = 0.05;
+	
+	//Atribuindo as coordenas da camera
+	Pcam.x = 35;
+	Pcam.y = 6370.001;
+	z = 0.1;
 	//z =  -0.04406;
-	Pcam = Paux; // determinacao do ponto de visualizacao da camera dentro do sistema de coordenadas
-	Paux2.x = 35;
-	Paux2.y = 6370;
+	
 
 	T.n[0] = 1.000320;
 	T.n[1] = 1.000330;
@@ -390,36 +390,84 @@ int main(int argc, char* argv[])
 	n_pontos_total = teste_2(L_ray1, &T, P_0[0], ang_0[0], xM[0], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[0], posRT, n_pontos_total, n_pontos[0]);
 	
+	Paux1 = L_ray[0][n_pontos[0] - 1];
+	Paux2 = L_ray[0][n_pontos[0] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[0][0] = Paux1;
+	L_rayRefracted[0][1].x = L_ray[0][0].x;
+	L_rayRefracted[0][1].y = m * (L_ray[0][0].x - Paux1.x) + Paux1.y;
+
 	posRT = 0;
 	
 	n_pontos_total = teste_2(L_ray1, &T, P_0[1], ang_0[1], xM[1], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[1], posRT, n_pontos_total, n_pontos[1]);
+
+	Paux1 = L_ray[1][n_pontos[1] - 1];
+	Paux2 = L_ray[1][n_pontos[1] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[1][0] = Paux1;
+	L_rayRefracted[1][1].x = L_ray[1][0].x;
+	L_rayRefracted[1][1].y = m * (L_ray[1][0].x - Paux1.x) + Paux1.y;
 
 	posRT = 0;
 
 	n_pontos_total = teste_2(L_ray1, &T, P_0[2], ang_0[2], xM[2], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[2], posRT, n_pontos_total, n_pontos[2]);
 
+	Paux1 = L_ray[2][n_pontos[2] - 1];
+	Paux2 = L_ray[2][n_pontos[2] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[2][0] = Paux1;
+	L_rayRefracted[2][1].x = L_ray[2][0].x;
+	L_rayRefracted[2][1].y = m * (L_ray[2][0].x - Paux1.x) + Paux1.y;
+
 	posRT = 0;
 
 	n_pontos_total = teste_2(L_ray1, &T, P_0[3], ang_0[3], xM[3], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[3], posRT, n_pontos_total, n_pontos[3]);
+
+	Paux1 = L_ray[3][n_pontos[3] - 1];
+	Paux2 = L_ray[3][n_pontos[3] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[3][0] = Paux1;
+	L_rayRefracted[3][1].x = L_ray[3][0].x;
+	L_rayRefracted[3][1].y = m * (L_ray[3][0].x - Paux1.x) + Paux1.y;
 
 	posRT = 0;
 
 	n_pontos_total = teste_2(L_ray1, &T, P_0[4], ang_0[4], xM[4], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[4], posRT, n_pontos_total, n_pontos[4]);
 
+	Paux1 = L_ray[4][n_pontos[4] - 1];
+	Paux2 = L_ray[4][n_pontos[4] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[4][0] = Paux1;
+	L_rayRefracted[4][1].x = L_ray[4][0].x;
+	L_rayRefracted[4][1].y = m * (L_ray[4][0].x - Paux1.x) + Paux1.y;
+
 	posRT = 0;
 
 	n_pontos_total = teste_2(L_ray1, &T, P_0[5], ang_0[5], xM[5], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[5], posRT, n_pontos_total, n_pontos[5]);
+
+	Paux1 = L_ray[5][n_pontos[5] - 1];
+	Paux2 = L_ray[5][n_pontos[5] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[5][0] = Paux1;
+	L_rayRefracted[5][1].x = L_ray[5][0].x;
+	L_rayRefracted[5][1].y = m * (L_ray[5][0].x - Paux1.x) + Paux1.y;
 
 	posRT = 0;
 
 	n_pontos_total = teste_2(L_ray1, &T, P_0[6], ang_0[6], xM[6], &posRT);
 	LightRay_ResolutionConverter(L_ray1, L_ray[6], posRT, n_pontos_total, n_pontos[6]);
 	
+	Paux1 = L_ray[6][n_pontos[6] - 1];
+	Paux2 = L_ray[6][n_pontos[6] - 2];
+	m = (Paux2.y - Paux1.y) / (Paux2.x - Paux1.x);
+	L_rayRefracted[6][0] = Paux1;
+	L_rayRefracted[6][1].x = L_ray[6][0].x;
+	L_rayRefracted[6][1].y = m * (L_ray[6][0].x - Paux1.x) + Paux1.y;
 
 	//Calculo do ponto de tangencia
 	Tangent_Line[0] = obs;
@@ -441,6 +489,14 @@ int main(int argc, char* argv[])
 			if (i >= n_pontos[j] - 1) printf("\nL_ray[%d]  P%d = (%.15lf; %.15lf)    d = %.15lf", j, i, L_ray[j][i].x, L_ray[j][i].y, sqrt(L_ray[j][i].x * L_ray[j][i].x + L_ray[j][i].y * L_ray[j][i].y));
 			//if (i >= 0) printf("\n  P%d = (%.15lf; %.15lf)    d = %.10lf", i, L_ray[1][i].x, L_ray[1][i].y, sqrt(L_ray[1][i].x * L_ray[1][i].x + L_ray[1][i].y * L_ray[1][i].y));
 		}
+
+	}
+
+	for (j = 0; j < 7; j++)
+	{
+		printf("\n\n\n");
+		printf("\nL_rayRefracted[%d]  P0 = (%.15lf; %.15lf)    d = %.15lf", j, L_rayRefracted[j][0].x, L_rayRefracted[j][0].y, sqrt(L_rayRefracted[j][0].x * L_rayRefracted[j][0].x + L_rayRefracted[j][0].y * L_rayRefracted[j][0].y));
+		printf("\nL_rayRefracted[%d]  P1 = (%.15lf; %.15lf)    d = %.15lf", j, L_rayRefracted[j][1].x, L_rayRefracted[j][1].y, sqrt(L_rayRefracted[j][1].x * L_rayRefracted[j][1].x + L_rayRefracted[j][1].y * L_rayRefracted[j][1].y));
 
 	}
 	
@@ -517,7 +573,7 @@ int main(int argc, char* argv[])
 			break;
 		}
 
-		if (Pcam.x > xM[0]) Pcam.x = Pcam.x - 0.02;
+		if (Pcam.x > xM[0]) Pcam.x = Pcam.x - 0.0005;
 		//if (Pcam.x < xM) Pcam.x = Pcam.x + 0.02;
 		else Pcam.x = xM[0];
 		
@@ -561,12 +617,40 @@ int main(int argc, char* argv[])
 
 	}
 
+
+	while (1) {
+		SDL_PollEvent(&event1);
+		if (event1.type == SDL_KEYDOWN) {
+			break;
+		}
+
+		
+		if (Pcam.x < 35) Pcam.x = Pcam.x + 0.02;
+		else Pcam.x = 35;
+
+
+		viewport_Earth_render(&T, Pcam.x, Pcam.y, z);
+		viewport_LightRay_render(L_rayRefracted[0], Pcam.x, Pcam.y, z, 1, luz_cor[0]);
+		viewport_LightRay_render(L_rayRefracted[1], Pcam.x, Pcam.y, z, 1, luz_cor[1]);
+		viewport_LightRay_render(L_rayRefracted[2], Pcam.x, Pcam.y, z, 1, luz_cor[2]);
+		viewport_LightRay_render(L_rayRefracted[3], Pcam.x, Pcam.y, z, 1, luz_cor[3]);
+		viewport_LightRay_render(L_rayRefracted[4], Pcam.x, Pcam.y, z, 1, luz_cor[4]);
+		viewport_LightRay_render(L_rayRefracted[5], Pcam.x, Pcam.y, z, 1, luz_cor[5]);
+		viewport_LightRay_render(L_rayRefracted[6], Pcam.x, Pcam.y, z, 1, luz_cor[6]);
+		viewport_LightRay_render(Tangent_Line, Pcam.x, Pcam.y, z, 1, luz_corT); //visualizacao da linha tangente
+		SDL_RenderPresent(renderer);
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+		SDL_RenderClear(renderer);
+
+
+	}
+
 	// Libera recursos
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 	
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 7; i++)
 	{
 		free(L_ray[i]);
 	}
